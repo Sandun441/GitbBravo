@@ -95,3 +95,77 @@ textarea {
     border-radius: 5px;
     cursor: pointer;
 }
+/* Add these animation styles to your existing CSS */
+
+/* Button hover animations */
+.action-btn, .submit-btn {
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background: #00ff88;
+    color: #0a0a0a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+    opacity: 0.9;
+}
+
+/* Button click animation */
+.action-btn:active, .submit-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Input and textarea focus animation */
+input, textarea {
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+}
+
+input:focus, textarea:focus {
+    border-color: #00ff88;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+    outline: none;
+}
+
+/* Post card hover animation */
+.post-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo hover animation */
+.logo {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Like button heart icon animation */
+.fa-heart {
+    transition: transform 0.3s ease;
+}
+
+.action-btn:hover .fa-heart {
+    transform: scale(1.2);
+}
+
+/* Submit button icon animation */
+.fa-paper-plane {
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover .fa-paper-plane {
+    transform: translateX(3px);
+}
