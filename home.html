@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
     <div id="app">
         <nav>
             <div class="nav-content">
@@ -18,7 +19,53 @@
                 </div>
             </div>
         </nav>
-
+<!-- Add this right after your <nav> element but before <main> -->
+    <div class="sidebar" :class="{ 'sidebar-open': isSidebarOpen }">
+        <button class="sidebar-toggle" @click="toggleSidebar">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <div class="user-profile">
+            <div class="profile-pic">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <h3>Anonymous User</h3>
+        </div>
+    
+        <div class="sidebar-menu">
+            <a href="#" class="menu-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="#" class="menu-item">
+                <i class="fas fa-envelope"></i>
+                <span>Messages</span>
+                <span class="notification-badge">{{ notifications.messages }}</span>
+            </a>
+            <a href="#" class="menu-item">
+                <i class="fas fa-bell"></i>
+                <span>Notifications</span>
+                <span class="notification-badge">{{ notifications.alerts }}</span>
+            </a>
+        </div>
+    
+        <div class="sidebar-section">
+            <h3>Trending Topics</h3>
+            <ul>
+                <li v-for="topic in trendingTopics" :key="topic">
+                    <i class="fas fa-hashtag"></i>
+                    {{ topic }}
+                </li>
+            </ul>
+        </div>
+    
+        <div class="sidebar-footer">
+            <a href="#" class="menu-item">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </div>
+    </div>
         <main>
             <section class="discussion">
                 <h2>Latest Discussions</h2>
@@ -54,7 +101,7 @@
         </main>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="home.js"></script>
 </body>
 </html>

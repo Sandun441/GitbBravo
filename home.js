@@ -1,3 +1,4 @@
+// home.js
 new Vue({
     el: '#app',
     data: {
@@ -12,6 +13,18 @@ new Vue({
         newPost: {
             title: '',
             content: ''
+        },
+        isSidebarOpen: false,  // This controls the sidebar state
+        trendingTopics: [
+            'Technology',
+            'Politics',
+            'Science',
+            'Entertainment',
+            'Sports'
+        ],
+        notifications: {
+            messages: 3,
+            alerts: 5
         }
     },
     methods: {
@@ -27,6 +40,11 @@ new Vue({
             });
             this.newPost.title = '';
             this.newPost.content = '';
+        },
+        toggleSidebar() {
+            this.isSidebarOpen = !this.isSidebarOpen;
+            // Add this line to toggle the class on the sidebar element
+            document.querySelector('.sidebar').classList.toggle('sidebar-open');
         }
     }
 });
