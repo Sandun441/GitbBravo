@@ -169,3 +169,253 @@ input:focus, textarea:focus {
 .submit-btn:hover .fa-paper-plane {
     transform: translateX(3px);
 }
+/* Sidebar styles */
+/* Enhanced Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Increased width */
+    width: 300px;
+    height: 100vh;
+    background: rgba(20, 20, 20, 0.95);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-open {
+    right: 0;
+}
+
+.user-profile {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-pic {
+    font-size: 4rem;
+    color: #00ff88;
+    margin-bottom: 10px;
+}
+
+.sidebar-menu {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    background: rgba(0, 255, 136, 0.1);
+    color: #00ff88;
+}
+
+.menu-item i {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.menu-item span {
+    flex: 1;
+}
+
+.menu-indicator {
+    color: #666;
+}
+
+.notification-badge {
+    background: #00ff88;
+    color: #0a0a0a;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+/* Enhanced Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: rgba(20, 20, 20, 0.95);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    display: flex;           /* Added */
+    flex-direction: column;  /* Added */
+}
+
+.sidebar-open {
+    right: 0;
+}
+
+.user-profile {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex: 0 0 auto;  /* Added */
+}
+
+.profile-pic {
+    font-size: 4rem;
+    color: #00ff88;
+    margin-bottom: 10px;
+}
+
+.sidebar-menu {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex: 0 0 auto;  /* Added */
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    background: rgba(0, 255, 136, 0.1);
+    color: #00ff88;
+}
+
+.menu-item i {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.menu-item span {
+    flex: 1;
+}
+
+.menu-indicator {
+    color: #666;
+}
+
+.notification-badge {
+    background: #00ff88;
+    color: #0a0a0a;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+.sidebar-section {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex: 1 0 auto;  /* Added */
+    overflow-y: auto;  /* Added */
+}
+
+.sidebar-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #00ff88;
+}
+
+.sidebar-section ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;  /* Added */
+}
+
+.sidebar-section li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.sidebar-section li i {
+    margin-right: 10px;
+    color: #00ff88;
+}
+
+.sidebar-section li:hover {
+    transform: translateX(5px);
+    color: #00ff88;
+}
+
+.sidebar-footer {
+    padding: 15px 20px;  /* Increased horizontal padding */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex: 0 0 auto;
+    margin-top: auto;
+    background: rgba(20, 20, 20, 0.95);  /* Match sidebar background */
+}
+
+.sidebar-footer .menu-item {
+    padding: 10px 0;  /* Reduced vertical padding */
+    color: white;  /* Ensure text is visible */
+}
+
+.sidebar-footer .menu-item i {
+    color: #00ff88;  /* Match icon color with other icons */
+}
+
+.sidebar-footer .menu-item:hover {
+    background: transparent;  /* Remove hover background */
+}
+
+.sidebar-footer .menu-item:hover i,
+.sidebar-footer .menu-item:hover span {
+    color: #00ff88;  /* Change color on hover */
+}
+
+.sidebar-toggle {
+    position: absolute;
+    top: 20px;
+    left: -45px;
+    background: #00ff88;
+    color: #0a0a0a;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px 0 0 5px;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    background: #00cc6a;
+    padding-right: 15px;
+}
+
+/* Animation for menu items */
+.menu-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: #00ff88;
+    transition: width 0.3s ease;
+}
+
+.menu-item:hover::after {
+    width: 100%;
+}
+
+/* Adjust main content when sidebar is open */
+.sidebar-open ~ main {
+    margin-right: 300px;
+    transition: margin-right 0.3s ease;
+}
